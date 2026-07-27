@@ -1,0 +1,14 @@
+{
+  "name": "playwright-gallery",
+  "version": "0.0.1",
+  "description": "Playwright story gallery for component testing",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfgreffier/playwright-gallery.git"
+  },
+  "author": "jfgreffier",
+  "license": "Apache-2.0"
+}
