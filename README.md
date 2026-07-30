@@ -6,7 +6,7 @@ playwright-gallery's goal is to provide a lightweight story gallery for the most
 
 | Framework | Available |
 | --------- | --------- |
-| React     | ❌        |
+| React     | ✅        |
 | Vue.js    | ❌        |
 | Angular   | ❌        |
 | Svelte    | ❌        |
@@ -27,15 +27,15 @@ playwright/gallery/index.html
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./main.tsx"></script>
+    <script type="module" src="./main.ts"></script>
   </body>
 </html>
 
 ```
 
-2. Create a .tsc file and import playwright-gallery
+2. Create a .ts file and import playwright-gallery
 
-playwright/gallery/main.tsx
+playwright/gallery/main.ts
 ```ts
 import 'playwright-gallery/react';
 
