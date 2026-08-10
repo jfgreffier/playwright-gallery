@@ -2,12 +2,12 @@
 
 Playwright story gallery for component testing
 
-playwright-gallery's goal is to provide a lightweight story gallery for the most popular frameworks.
+playwright-gallery's goal is to provide a lightweight story gallery for the most popular frameworks, easily enabling component testing with Playwright.
 
 | Framework | Available |
 | --------- | --------- |
 | React     | ✅        |
-| Vue.js    | ❌        |
+| Vue.js    | ✅        |
 | Angular   | ❌        |
 | Svelte    | ❌        |
 | Solid.js  | ❌        |
@@ -33,7 +33,7 @@ playwright/gallery/index.html
 
 ```
 
-2. Create a .ts file and import playwright-gallery
+2. Create a .ts file and import playwright-gallery with the needed frontend framework
 
 playwright/gallery/main.ts
 ```ts
