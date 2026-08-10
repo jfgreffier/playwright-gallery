@@ -6,8 +6,8 @@
     "test": "echo 'no tests yet' && exit 0"
   },
   "exports": {
-    "./react": "./lib/react/",
-    "./vue": "./lib/vue/"
+    "./react": "./lib/react/index.tsx",
+    "./vue": "./lib/vue/index.ts"
   },
   "repository": {
     "type": "git",
