@@ -3,6 +3,8 @@
   "version": "0.2.0",
   "description": "Playwright story gallery for component testing",
   "scripts": {
+    "prettier": "prettier --ignore-path .gitignore .",
+    "prettier:fix": "npm run prettier -- --write",
     "test": "echo 'no tests yet' && exit 0"
   },
   "exports": {
@@ -14,5 +16,8 @@
     "url": "git+https://github.com/jfgreffier/playwright-gallery.git"
   },
   "author": "jfgreffier",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
 }
