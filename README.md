@@ -1,5 +1,7 @@
 # Playwright gallery
 
+[![NPM Version](https://img.shields.io/npm/v/playwright-gallery)](https://www.npmjs.com/package/playwright-gallery)
+
 Playwright story gallery for component testing
 
 playwright-gallery's goal is to provide a lightweight story gallery for the most popular frameworks, easily enabling component testing with Playwright.
