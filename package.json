@@ -8,6 +8,7 @@
     "test": "echo 'no tests yet' && exit 0"
   },
   "exports": {
+    "./angular": "./lib/angular/index.ts",
     "./react": "./lib/react/index.tsx",
     "./vue": "./lib/vue/index.ts"
   },

@@ -10,7 +10,7 @@ playwright-gallery's goal is to provide a lightweight story gallery for the most
 | --------- | --------- |
 | React     | ✅        |
 | Vue.js    | ✅        |
-| Angular   | ❌        |
+| Angular   | ✅        |
 | Svelte    | ❌        |
 | Solid.js  | ❌        |
 
