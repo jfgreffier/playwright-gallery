@@ -44,7 +44,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npm run dev',
+    command: 'vite',
     url: 'http://localhost:5173/playwright/gallery/index.html',
     reuseExistingServer: !process.env.CI,
   },
