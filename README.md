@@ -56,6 +56,175 @@ import 'playwright-gallery/react';
 
 3. Once the gallery is setup you may [configure Playwright](https://playwright.dev/docs/test-components#step-2-configure-playwright) as usual, then write a [story](https://playwright.dev/docs/test-components#step-3-write-a-story) and [test](https://playwright.dev/docs/test-components#step-4-write-a-test)
 
+## Examples
+
+### React
+
+src/components/CounterButton.tsx
+```ts
+import { useState } from "react";
+
+export const CounterButton = ({ initalCount = 0 }: { initalCount?: number }) => {
+  const [count, setCount] = useState(initalCount);
+  return (
+    <button
+      type="button"
+      className="counter"
+      onClick={() => setCount((count) => count + 1)}
+    >
+      Count is {count}
+    </button>
+  );
+};
+
+```
+
+src/components/CounterButton.story.tsx
+```ts
+import { CounterButton } from "./CounterButton";
+
+export const Primary = () => <CounterButton />;
+
+export const Seven = () => <CounterButton initalCount={7} />;
+
+```
+
+tests/components/counterbutton.spec.ts
+```ts
+import { test, expect } from "@playwright/test";
+
+test("renders primary button", async ({ mount }) => {
+  const component = await mount("components/CounterButton/Primary");
+
+  await expect(component.getByRole("button")).toContainText("Count is");
+});
+
+test("button shows inital count", async ({ mount }) => {
+  const component = await mount("components/CounterButton/Seven");
+
+  await expect(component.getByRole("button")).toHaveText("Count is 7");
+});
+
+```
+
+### Vue.js
+
+src/components/Count.vue
+```ts
+<script setup lang="ts">
+import { ref } from "vue";
+
+const props = withDefaults(defineProps<{ initialCount?: number }>(), {
+  initialCount: 0,
+});
+
+const count = ref(props.initialCount);
+</script>
+
+<template>
+  <button type="button" class="counter" @click="count++">
+    Count is {{ count }}
+  </button>
+</template>
+
+```
+
+src/components/Count.story.ts
+```ts
+import { defineComponent, h } from "vue";
+import Count from "./Count.vue";
+
+export const Primary = defineComponent(() => () => h(Count));
+
+export const Seven = defineComponent(() => () => h(Count, { initialCount: 7 }));
+
+```
+
+tests/components/count.spec.ts
+```ts
+import { test, expect } from "@playwright/test";
+
+test("renders primary button", async ({ mount }) => {
+  const component = await mount("components/Count/Primary");
+
+  await expect(component.getByRole("button")).toContainText("Count is");
+});
+
+test("button shows inital count", async ({ mount }) => {
+  const component = await mount("components/Count/Seven");
+
+  await expect(component.getByRole("button")).toHaveText("Count is 7");
+});
+
+```
+
+### Angular
+
+src/components/counter-button.component.ts
+```ts
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-counterbutton',
+  standalone: true,
+  template: `<button type="button" (click)="increment()">Count is {{ count }}</button>`,
+})
+export class CounterButtonComponent {
+  @Input() count = 0;
+
+  increment(): void {
+    this.count += 1;
+  }
+}
+
+```
+
+src/components/counter-button.story.ts
+```ts
+import { Component, Input } from '@angular/core';
+
+import { CounterButtonComponent } from './counter-button.component';
+
+@Component({
+  selector: 'app-counterbutton-primary-story',
+  standalone: true,
+  imports: [CounterButtonComponent],
+  template: `<app-counterbutton [count]="count"></app-counterbutton>`,
+})
+export class Primary {
+  @Input() count = 0;
+}
+
+@Component({
+  selector: 'app-counterbutton-seven-story',
+  standalone: true,
+  imports: [CounterButtonComponent],
+  template: `<app-counterbutton [count]="count"></app-counterbutton>`,
+})
+export class Seven {
+  @Input() count = 7;
+}
+
+```
+
+tests/components/counter-button.spec.ts
+```ts
+import { test, expect } from '@playwright/test';
+
+test('renders primary button', async ({ mount }) => {
+  const component = await mount('components/counter-button/Primary');
+
+  await expect(component.getByRole('button')).toContainText('Count is');
+});
+
+test('button shows inital count', async ({ mount }) => {
+  const component = await mount('components/counter-button/Seven');
+
+  await expect(component.getByRole('button')).toHaveText('Count is 7');
+});
+
+```
+
 ## Contributing
 
 Note that the project is in early stage.
