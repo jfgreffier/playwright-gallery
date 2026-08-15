@@ -16,6 +16,14 @@ playwright-gallery's goal is to provide a lightweight story gallery for the most
 
 ## Getting started
 
+```bash
+npx playwright-gallery init
+```
+
+Once the gallery is setup you may write a [story](https://playwright.dev/docs/test-components#step-3-write-a-story) and [test](https://playwright.dev/docs/test-components#step-4-write-a-test)
+
+## Manual setup
+
 1. Create an HTML file
 
 playwright/gallery/index.html
@@ -46,7 +54,7 @@ import 'playwright-gallery/react';
 
 ```
 
-3. Once the gallery is setup you may [configure Playwright](https://playwright.dev/docs/test-components#step-2-configure-playwright) as usual, then write a [story](https://playwright.dev/docs/test-components#step-3-write-a-story) and [test](https://playwright.dev/docs/test-components#step-3-write-a-story)
+3. Once the gallery is setup you may [configure Playwright](https://playwright.dev/docs/test-components#step-2-configure-playwright) as usual, then write a [story](https://playwright.dev/docs/test-components#step-3-write-a-story) and [test](https://playwright.dev/docs/test-components#step-4-write-a-test)
 
 ## Contributing
 

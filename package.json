@@ -2,16 +2,20 @@
   "name": "playwright-gallery",
   "version": "0.2.1",
   "description": "Playwright story gallery for component testing",
-  "scripts": {
-    "prettier": "prettier --ignore-path .gitignore .",
-    "prettier:fix": "npm run prettier -- --write",
-    "test": "echo 'no tests yet' && exit 0"
+  "bin": {
+    "playwright-gallery": "./bin/playwright-gallery.js"
   },
   "exports": {
     "./angular": "./lib/angular/index.ts",
     "./react": "./lib/react/index.tsx",
     "./vue": "./lib/vue/index.ts"
   },
+  "scripts": {
+    "prettier": "prettier --ignore-path .gitignore .",
+    "prettier:fix": "npm run prettier -- --write",
+    "test": "echo 'no tests yet' && exit 0"
+  },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jfgreffier/playwright-gallery.git"
