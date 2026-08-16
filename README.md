@@ -17,6 +17,7 @@ playwright-gallery's goal is to provide a lightweight story gallery for the most
 ## Getting started
 
 ```bash
+npm install --save-dev playwright-gallery
 npx playwright-gallery init
 ```
 
@@ -43,7 +44,13 @@ playwright/gallery/index.html
 
 ```
 
-2. Create a .ts file and import playwright-gallery with the needed frontend framework
+2. Install `playwright-gallery`
+
+ ```bash
+npm install --save-dev playwright-gallery
+```
+
+3. Create a .ts file and import playwright-gallery with the needed frontend framework
 
 playwright/gallery/main.ts
 ```ts
@@ -54,7 +61,7 @@ import 'playwright-gallery/react';
 
 ```
 
-3. Once the gallery is setup you may [configure Playwright](https://playwright.dev/docs/test-components#step-2-configure-playwright) as usual, then write a [story](https://playwright.dev/docs/test-components#step-3-write-a-story) and [test](https://playwright.dev/docs/test-components#step-4-write-a-test)
+4. Once the gallery is setup you may [configure Playwright](https://playwright.dev/docs/test-components#step-2-configure-playwright) as usual, then write a [story](https://playwright.dev/docs/test-components#step-3-write-a-story) and [test](https://playwright.dev/docs/test-components#step-4-write-a-test)
 
 ## Examples
 
