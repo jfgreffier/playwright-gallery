@@ -22,6 +22,11 @@
   },
   "author": "jfgreffier",
   "license": "Apache-2.0",
+  "keywords": [
+    "e2e",
+    "playwright",
+    "testing"
+  ],
   "devDependencies": {
     "prettier": "^3.9.6"
   }
